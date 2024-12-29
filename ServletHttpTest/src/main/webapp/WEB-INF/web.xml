@@ -1,0 +1,16 @@
+<web-app>
+	<servlet>
+		<servlet-name> ServletHttpTest </servlet-name>
+		<servlet-class> com.demo.servlethttp.ServletHttp </servlet-class>
+
+		<init-param>
+			<param-name> url </param-name>
+			<param-value> http://gmail.com </param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mappping>
+		<servlet-name> ServletHttpTest </servlet-name>
+		<url-pattern> /first </url-pattern>
+	</servlet-mappping>
+</web-app>

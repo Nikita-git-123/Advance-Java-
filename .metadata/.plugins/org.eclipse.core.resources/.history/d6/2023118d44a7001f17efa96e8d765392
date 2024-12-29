@@ -1,0 +1,74 @@
+package com.test.oraclejdbc;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import javax.mail.MessagingException;
+import java.sql.*;
+
+public class SendOtpServlet extends HttpServlet {
+
+    // Database connection settings
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/your_database"; // Your database URL
+    private static final String DB_USER = "root"; // Your database username
+    private static final String DB_PASS = "your_password"; // Your database password
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String email = request.getParameter("Uemail");
+
+        // Check if the email exists in the database
+        if (isEmailRegistered(email)) {
+            // Generate 4-digit OTP
+            String otp = OTPGenerator.generateOTP();
+
+            try {
+                // Send OTP to the email
+                EmailUtility.sendEmail(email, otp);
+
+                // Optionally, store the OTP in the database with an expiry time
+                storeOtpInDatabase(email, otp);
+
+                // Send success response
+                response.getWriter().write("OTP sent to your email.");
+            } catch (MessagingException e) {
+                e.printStackTrace();
+                response.getWriter().write("Error sending OTP. Please try again.");
+            }
+        } else {
+            response.getWriter().write("Email not registered.");
+        }
+    }
+
+    // Method to check if the email exists in the database
+	/*
+	 * private boolean isEmailRegistered(String email) { boolean isRegistered =
+	 * false; Connection connection = null; PreparedStatement statement = null;
+	 * ResultSet resultSet = null;
+	 * 
+	 * try { connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+	 * String query = "SELECT * FROM users WHERE email = ?"; statement =
+	 * connection.prepareStatement(query); statement.setString(1, email); resultSet
+	 * = statement.executeQuery();
+	 * 
+	 * if (resultSet.next()) { isRegistered = true; } } catch (SQLException e) {
+	 * e.printStackTrace(); } finally { try { if (resultSet != null)
+	 * resultSet.close(); if (statement != null) statement.close(); if (connection
+	 * != null) connection.close(); } catch (SQLException e) { e.printStackTrace();
+	 * } } return isRegistered; }
+	 * 
+	 * // Method to store OTP in the database (optional) private void
+	 * storeOtpInDatabase(String email, String otp) { Connection connection = null;
+	 * PreparedStatement statement = null;
+	 * 
+	 * try { connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+	 * String query =
+	 * "UPDATE users SET otp = ?, otp_expiry = NOW() + INTERVAL 10 MINUTE WHERE email = ?"
+	 * ; statement = connection.prepareStatement(query); statement.setString(1,
+	 * otp); statement.setString(2, email); statement.executeUpdate(); } catch
+	 * (SQLException e) { e.printStackTrace(); } finally { try { if (statement !=
+	 * null) statement.close(); if (connection != null) connection.close(); } catch
+	 * (SQLException e) { e.printStackTrace(); } } }
+	 */
+}
+

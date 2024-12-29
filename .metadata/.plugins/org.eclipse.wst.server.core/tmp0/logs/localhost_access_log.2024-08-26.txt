@@ -1,0 +1,16 @@
+127.0.0.1 - - [26/Aug/2024:00:03:12 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:03:14 +0530] "GET /SessionManagementCookie/servlet/com.demo.cookie.SecondServlet HTTP/1.1" 404 820
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:03:14 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:03:27 +0530] "GET /SessionManagementCookie/index.html HTTP/1.1" 200 330
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:03:35 +0530] "GET /ServletContext/First?username=niku&pwd=niku HTTP/1.1" 200 168
+127.0.0.1 - - [26/Aug/2024:00:04:40 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:04:41 +0530] "GET /SessionManagementCookie/index.html HTTP/1.1" 200 339
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:04:42 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:04:50 +0530] "GET /SessionManagementCookie/First?username=niku&pwd=niku HTTP/1.1" 500 3428
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:05:32 +0530] "GET /SessionManagementCookie/First?username=niku&pwd=niku HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:05:42 +0530] "GET /SessionManagementCookie/First?username=niku&pwd=niku HTTP/1.1" 404 682
+127.0.0.1 - - [26/Aug/2024:00:06:07 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:06:07 +0530] "GET /SessionManagementCookie/ HTTP/1.1" 200 339
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:06:14 +0530] "GET /SessionManagementCookie/First?username=niku&pwd=niku HTTP/1.1" 500 1382
+127.0.0.1 - - [26/Aug/2024:00:07:25 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [26/Aug/2024:00:07:28 +0530] "GET /SessionManagementCookie/First?username=niku&pwd=niku HTTP/1.1" 200 27

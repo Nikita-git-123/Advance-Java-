@@ -1,0 +1,6 @@
+127.0.0.1 - - [16/Nov/2024:14:45:34 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [16/Nov/2024:14:45:35 +0530] "GET /OracleJdbcTest/JDBC.html HTTP/1.1" 200 4304
+0:0:0:0:0:0:0:1 - - [16/Nov/2024:14:45:35 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [16/Nov/2024:14:45:59 +0530] "GET /OracleJdbcTest/registration?Uname=Namrata&Uemail=namu%40gmail.com&Uphone=9867398074&Username=Patil%40123&Upwd1=NikuPatil&Upwd2=NikuPatil HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [16/Nov/2024:14:46:03 +0530] "GET /OracleJdbcTest/registration?Uname=Namrata&Uemail=namu%40gmail.com&Uphone=9867398074&Username=Patil%40123&Upwd1=NikuPatil&Upwd2=NikuPatil HTTP/1.1" 405 751
+0:0:0:0:0:0:0:1 - - [16/Nov/2024:14:46:04 +0530] "GET /OracleJdbcTest/registration?Uname=Namrata&Uemail=namu%40gmail.com&Uphone=9867398074&Username=Patil%40123&Upwd1=NikuPatil&Upwd2=NikuPatil HTTP/1.1" 405 751

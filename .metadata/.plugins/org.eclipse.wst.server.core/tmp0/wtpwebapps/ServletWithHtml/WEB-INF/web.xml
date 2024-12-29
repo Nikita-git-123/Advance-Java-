@@ -1,0 +1,11 @@
+<web-app>
+	<servlet>
+		<servlet-name> ServletHtml </servlet-name>
+		<servlet-class> com.demo.servlet.ServletHtml </servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name> ServletHtml </servlet-name>
+		<url-pattern> /servletHtml </url-pattern>
+	</servlet-mapping>
+</web-app>

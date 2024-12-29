@@ -1,0 +1,22 @@
+package com.test.oraclejdbc;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class UserVerify extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)  {
+		
+		String uemail = request.getParameter("Uemail");
+		
+		SendEmail sm = new SendEmail();
+		String code = sm.generateOTP();
+		
+		User user = new User(uemail, code);
+	}
+	
+	
+
+}

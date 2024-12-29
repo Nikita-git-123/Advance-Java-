@@ -1,0 +1,5 @@
+1724518426150	Delete element
+1724518511061	Delete element
+1724518659561	Extract local variable 'initParameter'
+1724518943391	Extract local variable 'writer'
+1724519574375	Extract local variable 'connection'

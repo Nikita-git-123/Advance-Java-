@@ -1,0 +1,28 @@
+<web-app>
+	<servlet>
+		<servlet-name> ServletTest </servlet-name>
+		<servlet-class> com.servlet.test.ServletTest </servlet-class>
+		
+		<init-param>
+			<param-name>url</param-name>
+			<param-value>http://facebook.com</param-value>
+			<description>Redirecting to facebook</description>
+		</init-param>
+		
+		<init-param>
+			<param-name>dbusername</param-name>
+			<param-value>system</param-value>
+			<description>Describes Data base user name</description>
+		</init-param>
+
+		<init-param>
+			<param-name>dbpassword</param-name>
+			<param-value>patil2020</param-value>
+			<description>Describes Data base password</description>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name> ServletTest </servlet-name>
+		<url-pattern> /testServlet </url-pattern>
+	</servlet-mapping>
+</web-app>

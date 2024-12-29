@@ -1,0 +1,32 @@
+<web-app>
+
+<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name> url </param-name>
+		<param-value> http://www.facebook.com </param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name> FirstServlet </servlet-name>
+		<servlet-class> com.demo.servlets.ServletOne </servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name> FirstServlet </servlet-name>
+		<url-pattern> /First </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name> SecondServlet </servlet-name>
+		<servlet-class> com.demo.servlets.ServletTwo </servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name> SecondServlet </servlet-name>
+		<url-pattern> /Second </url-pattern>
+	</servlet-mapping>
+
+</web-app>

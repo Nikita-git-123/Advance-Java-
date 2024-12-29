@@ -1,0 +1,13 @@
+package com.test.oraclejdbc;
+
+import java.security.SecureRandom;
+
+public class SendEmail {
+	
+	 public static String generateOTP() {
+	        SecureRandom random = new SecureRandom();
+	        int otp = random.nextInt(9000) + 1000; // Generates a 4-digit OTP
+	        return String.format("%04d", otp);
+	        //return String.valueOf(otp);
+	 }
+}

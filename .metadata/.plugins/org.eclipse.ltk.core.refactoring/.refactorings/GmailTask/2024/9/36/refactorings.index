@@ -1,0 +1,5 @@
+1725282542884	Extract local variable 'userName'
+1725282572015	Extract local variable 'passWord'
+1725282715798	Extract local variable 'requestDispatcher'
+1725282779513	Extract local variable 'out'
+1725285097251	Extract local variable 'out'

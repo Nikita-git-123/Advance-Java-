@@ -1,0 +1,14 @@
+package com.test.oraclejdbc;
+
+import java.security.SecureRandom;
+
+public class OTPGenerator {
+
+    // Method to generate a 4-digit OTP
+    public static String generateOTP() {
+        SecureRandom random = new SecureRandom();
+        int otp = random.nextInt(9000) + 1000; // Generates a 4-digit OTP
+        return String.valueOf(otp);
+    }
+}
+

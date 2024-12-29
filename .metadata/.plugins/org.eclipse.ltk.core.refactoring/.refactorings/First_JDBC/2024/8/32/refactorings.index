@@ -1,0 +1,4 @@
+1722868840379	Extract local variable 'statement'
+1722874911498	Extract method 'extracted'
+1722875190007	Delete element
+1722877215054	Extract method 'insertEmployee'
